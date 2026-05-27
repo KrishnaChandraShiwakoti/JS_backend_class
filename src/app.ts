@@ -3,12 +3,15 @@ import personRouter from "./routes/person.routes";
 import productRouter from "./routes/product.route";
 import { HttpException } from "./exceptions/http-exception";
 import { ApiResponseHelper } from "./utils/api-response";
+
+import userRoute from "./routes/user.route";
 const app: Application = express();
 app.use(express.json()); //use json as request
 app.use(express.urlencoded({ extended: true })); //use form-urlencoded as request
 
 app.use("/api/persons", personRouter);
 app.use("/api/product", productRouter);
+app.use("/api/v1/auth", userRoute);
 
 //global handler if no route match , return 404
 
