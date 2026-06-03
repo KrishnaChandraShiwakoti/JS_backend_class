@@ -5,6 +5,8 @@ export const PORT = process.env.PORT || 8088;
 export const MOCK = process.env.MOCK_DB || "mock";
 export const MONGODB_URI = process.env.MONGODB_URI;
 
+export const SECRECT_KEY = process.env.SECRECT_KEY;
+
 //same as
 //export{
 //PORT,
